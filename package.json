@@ -2,7 +2,6 @@
   "name": "cypress-dojo-ambev",
   "version": "1.0.0",
   "description": "Coding DOJO automação com Cypress",
-  "main": "index.js",
   "scripts": {
     "cy:test": "npx cypress run",
     "cy:open": "npx cypress open"
@@ -11,8 +10,17 @@
     "type": "git",
     "url": "git+https://github.com/renatosantanaoliveira/cypress-dojo-ambev.git"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": [
+    "Cypress",
+    "Dojo",
+    "Web",
+    "API"
+  ],
+  "author": "Renato Santana",
+  "contributors": [
+    "Fabio Araujo (https://github.com/fabiocaraujo)",
+    "Renato Santana (https://github.com/renatosantanaoliveira)"
+  ],
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/renatosantanaoliveira/cypress-dojo-ambev/issues"
@@ -20,5 +28,8 @@
   "homepage": "https://github.com/renatosantanaoliveira/cypress-dojo-ambev#readme",
   "devDependencies": {
     "cypress": "^10.7.0"
+  },
+  "dependencies": {
+    "faker-br": "^0.4.1"
   }
 }
