@@ -53,3 +53,33 @@ Cypress.Commands.add('criarPerfil', (cia, site, cidade, skills, github, minibio)
   cy.get('[data-test="profile-bio"]').type(minibio)
   cy.get('[data-test="profile-submit"]').click()
 })
+
+Cypress.Commands.add("gerarToken", (email, senha) => {
+  cy.request({
+      method: "POST",
+      url: "/api/auth",
+      body: {
+        email: email,
+        password: senha,
+      },
+  }).then((response) => {
+    return response.body.jwt;
+  });
+});
+
+Cypress.Commands.add("cadastrarExperiencia", (token, cargo, empresa, data) => {
+  cy.request({
+    method: "PUT",
+    url: "/api/profile/experience",
+    headers: {
+      Cookie: token,
+    },
+    body: {
+      title: cargo,
+      company: empresa,
+      from: data,
+    },
+  }).then((response) => {
+    return response.body.experience[0]._id;
+  });
+})
