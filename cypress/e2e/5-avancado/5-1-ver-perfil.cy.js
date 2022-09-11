@@ -15,7 +15,7 @@ describe('Funcionalidade: Ver perfis', () => {
                 body: mockPerfis
             }).as('getPerfis')  
         })
-        cy.visit('perfis')
+        cy.visit('/perfis')
         cy.get('[data-test="profile-name"]').first().should('have.text', 'Paulo Guerra' )
     });
 
@@ -28,9 +28,9 @@ describe('Funcionalidade: Ver perfis', () => {
             body: mkPerfis
           }).as('getPerfis')
 
-          cy.visit('perfis')
+          cy.visit('/perfis')
 
-        cy.get('[data-test="profile-name"]').last().should('have.text', 'Thiago de Souza')
+        cy.get('[data-test="profile-name"]').last().should('have.text', 'Wedney Santos Silva')
     });
 
     it('Deve vlaidar o terceiro item da lista', () => {
