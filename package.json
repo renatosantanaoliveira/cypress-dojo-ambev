@@ -27,8 +27,13 @@
   },
   "homepage": "https://github.com/renatosantanaoliveira/cypress-dojo-ambev#readme",
   "devDependencies": {
+    "@badeball/cypress-cucumber-preprocessor": "^12.2.0",
+    "@cypress/browserify-preprocessor": "^3.0.2",
     "cypress": "^10.7.0"
   },
+  "stepDefinitions": [
+    "cypress/support/step_definitions/**/*.{js,ts}"
+  ],
   "dependencies": {
     "faker-br": "^0.4.1"
   }
