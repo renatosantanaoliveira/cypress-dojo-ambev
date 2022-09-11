@@ -27,6 +27,7 @@
   },
   "homepage": "https://github.com/renatosantanaoliveira/cypress-dojo-ambev#readme",
   "devDependencies": {
+    "@shelex/cypress-allure-plugin": "^2.31.0",
     "cypress": "^10.7.0"
   },
   "dependencies": {
